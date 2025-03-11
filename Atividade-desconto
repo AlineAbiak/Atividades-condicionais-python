@@ -1,0 +1,37 @@
+import os
+
+os.system('cls')
+
+print("   |COMPRAS|   ", "\n")
+
+produto = input("  Selecione o produto desejado: ")
+
+quantidade = int(input("  Selecione a quantidade desejada: "))
+
+preco = float(input("  Selecione o preco do produto: "))
+
+total = quantidade * preco
+
+os.system('cls')
+
+print("    |CUPOM FISCAL|    ", "\n")
+
+print("|Produto: ", produto, quantidade, "und.")
+
+print("|Valor sem desconto: R$",total)
+
+if(quantidade <= 5):
+    desconto =total * 0.02  
+    print("|Desconto: 2%  R$",desconto)
+    print("|Valor com desconto: R$",total - desconto)
+
+elif(quantidade > 5 and quantidade <= 10):
+    desconto =total * 0.03
+    print("|Desconto: 3%  R$",desconto)
+    print("|Valor com desconto: R$",total - desconto)
+
+else:
+    desconto =total * 0.05
+    print("|Desconto: 5%  R$",desconto)
+    print("|Valor com desconto: R$",total - desconto)
+    
